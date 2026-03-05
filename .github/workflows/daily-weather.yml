@@ -2,8 +2,8 @@ name: Daily Weather Email
 
 on:
   schedule:
-    - cron: '0 10 * * *'   # 10:00 UTC = 5:00 AM ET (winter/EST)
-                             # = 6:00 AM EDT (summer) — adjust to '0 9 * * *' in summer
+    - cron: '0 10 * * *'   # 5:00 AM EST (Nov–Mar, UTC-5)
+    - cron: '0 9 * * *'    # 5:00 AM EDT (Mar–Nov, UTC-4)
   workflow_dispatch:          # Allow manual trigger for testing
 
 jobs:
